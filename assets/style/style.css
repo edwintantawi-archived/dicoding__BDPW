@@ -12,11 +12,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-
 }
 
 /* header */
@@ -24,12 +24,15 @@ header {
   display: inline;
 }
 
+.title {
+  font-family: "Lobster";
+}
+
 #mark {
   display: flex;
   width: 100%;
-  box-sizing: border-box;
   padding: 20px;
-  background-color: rgb(120, 101, 206);
+  background-color: rgb(128, 76, 196);
 }
 
 #mark img {
@@ -39,7 +42,6 @@ header {
 }
 
 #mark h1 {
-  font-family: "Lobster";
   color: white;
   margin: auto 0px auto 20px;
   font-size: 50px;
@@ -51,7 +53,6 @@ nav {
   top: 0px;
   display: flex;
   width: 100%;
-  box-sizing: border-box;
   height: 60px;
   background-color: rgb(100, 27, 143);
   padding: 20px;
@@ -71,7 +72,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -79,11 +80,162 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* main */
+/* content */
+.part {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0px auto;
+  border-bottom: 4px solid purple;
+  padding-bottom: 20px;
+  padding: 48px 0px 20px 0px;
+}
+
+.part h2 {
+  text-align: center;
+  font-size: 40px;
+  padding: 50px;
+  font-weight: bold;
+}
+
+.part .inpart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.part .inpart section {
+  margin: 40px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.part img {
+  width: 300px;
+}
+
+#class .inpart {
+  justify-content: space-evenly;
+}
+
+#class h2 {
+  padding-bottom: 10px;
+}
+
+#class p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* kelas */
+.contain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.picCard {
+  width: 25%;
+  height: 250px;
+  background-color: rgb(172, 55, 172);
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.picCard:hover {
+  transition: 0.3s;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.555);
+}
+
+.picPlace {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.picCard .picPlace img {
+  width: 100%;
+}
+
+#content article:last-child {
+  border: none;
+}
+
+aside {
+
+  margin-top: 40px;
+  padding: 40px;
+  background-color: rgb(169, 105, 233);
+  color: white;
+}
+
+aside article.card {
+  text-align: center;
+}
+
+hr {
+  width: 20%;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 0px auto 12px auto;
+}
+
+table {
+  width: 100%;
+}
+
+table th {
+  text-align: right;
+}
+
+table td {
+  text-align: left;
+  padding-left: 30px;
+}
+
+aside header {
+  text-align: center;
+}
+
+
+figure img {
+  width: 100px;
+  border: 5px solid purple;
+  border-radius: 50%;
+  margin: 16px 0px 30px 0px;
+}
+
+/* footer */
+footer {
+  background-color: rgb(100, 27, 143);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /* media query */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
 
   /* header */
   #mark {
@@ -116,4 +268,158 @@ nav ul li a:hover {
   }
 
   /* main */
+  .part .inpart section {
+    margin: 10px;
+    font-size: 17px;
+  }
+
+  .part .inpart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .part img {
+    width: 180px;
+  }
+
+  .part .last {
+    order: 1;
+  }
+
+  .part h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  .part {
+    width: 100%;
+    padding: 50px 12px 30px 12px;
+  }
+
+  /* kelas */
+  .contain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .picCard {
+    width: 25%;
+    height: 200px;
+    background-color: rgb(172, 55, 172);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  .picPlace {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .picCard .picPlace img {
+    width: 100%;
+  }
+}
+
+/* media query */
+@media screen and (max-width: 500px) {
+
+  /* header */
+  #mark {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #mark h1 {
+    font-size: 40px;
+  }
+
+  nav {
+    padding: 15px;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin-right: 24px;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  /* main */
+  .part .inpart section {
+    margin: 10px;
+    font-size: 17px;
+  }
+
+  .part .inpart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .part img {
+    width: 180px;
+  }
+
+  .part .last {
+    order: 1;
+  }
+
+  .part h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  .part {
+    width: 100%;
+    padding: 50px 12px 30px 12px;
+  }
+
+  /* kelas */
+  .contain {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .picCard {
+    width: 50%;
+    height: 230px;
+    background-color: rgb(172, 55, 172);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .picPlace {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .picCard .picPlace img {
+    width: 100%;
+  }
 }
